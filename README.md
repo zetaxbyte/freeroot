@@ -13,12 +13,11 @@ This shell script is designed to automate the installation of Foxytoux, a lightw
 
 ## Installation
 
-setup:
+# setup:
 
-    ```sh
-    git clone https://github.com/zetaxbyte/freeroot.git && cd freeroot && chmod +x root.sh && ./root.sh
-    ```
-
+```sh
+git clone https://github.com/zetaxbyte/freeroot.git && cd freeroot && chmod +x root.sh && ./root.sh
+```
 ## Supported Architectures
 
 - x86_64 (amd64)
