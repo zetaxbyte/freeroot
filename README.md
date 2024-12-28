@@ -18,6 +18,15 @@ This shell script is designed to automate the installation of Foxytoux, a lightw
 ```sh
 git clone https://github.com/zetaxbyte/freeroot.git && cd freeroot && chmod +x root.sh && ./root.sh
 ```
+
+# setup inside proot
+
+copy and paste make sure you do this inside on proot of root server it will make better user & hostanme
+
+```sh
+export PS1='root@ubuntu:~# ' && clear && echo -e "\n==============\n\033[96mSETUP COMPLETE\n\033[0m==============\n"
+```
+
 ## Supported Architectures
 
 - x86_64 (amd64)

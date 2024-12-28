@@ -16,14 +16,14 @@ else
 fi
 
 if [ ! -e $ROOTFS_DIR/.installed ]; then
-  echo "#######################################################################################"
-  echo "#"
-  echo "#                                      Foxytoux INSTALLER"
-  echo "#"
-  echo "#                           Copyright (C) 2024, RecodeStudios.Cloud"
-  echo "#"
-  echo "#"
-  echo "#######################################################################################"
+  echo "#################################################################################"
+  echo "#										#"
+  echo "#                                Foxytoux INSTALLER				#"
+  echo "#										#"
+  echo "#                     Copyright (C) 2024, RecodeStudios.Cloud			#"
+  echo "#										#"
+  echo "#										#"
+  echo "#################################################################################"
 
   read -p "Do you want to install Ubuntu? (YES/no): " install_ubuntu
 fi
@@ -74,6 +74,7 @@ display_gg() {
   echo -e "${WHITE}___________________________________________________${RESET_COLOR}"
   echo -e ""
   echo -e "           ${CYAN}-----> Mission Completed ! <----${RESET_COLOR}"
+  echo -e "${WHITE}___________________________________________________${RESET_COLOR}"
 }
 
 clear
@@ -81,4 +82,12 @@ display_gg
 
 $ROOTFS_DIR/usr/local/bin/proot \
   --rootfs="${ROOTFS_DIR}" \
-  -0 -w "/root" -b /dev -b /sys -b /proc -b /etc/resolv.conf --kill-on-exit
+  -0 \
+  -w /root \
+  -b /dev \
+  -b /sys \
+  -b /proc \
+  -b /etc/resolv.conf \
+  -b /tmp \
+  --kill-on-exit \
+  /bin/bash --login
